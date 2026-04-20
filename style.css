@@ -1,0 +1,117 @@
+/* 1. Скидання налаштувань (Reset)
+   Різні браузери мають різні відступи за замовчуванням.
+   Цей блок обнуляє їх для повного контролю над макетом. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Розміри елемента включатимуть його внутрішні відступи (padding) та рамки (border) */
+}
+
+/* 2. Базова типографіка та фон */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f4f7f6;
+}
+
+/* 3. Головний контейнер (Layout)
+   Центрує контент та обмежує його максимальну ширину для зручності читання. */
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Навігація
+   Перетворюємо звичайні текстові посилання на повноцінне меню. */
+nav {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Плавна анімація при наведенні */
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* Приховуємо стандартну горизонтальну лінію, оскільки дизайн навігації тепер візуально відокремлений */
+hr {
+    display: none;
+}
+
+/* 5. Заголовки та текст */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    margin-bottom: 15px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* 6. Стилізація форми на сторінці контактів */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
